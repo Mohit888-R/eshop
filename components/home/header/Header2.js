@@ -719,9 +719,15 @@ const NavData = [
 function Header2() {
     const [Index, setIndex] = useState(0);
     const [open, setOpen] = useState(false);
+    
+    const handleOpen=()=>{
+        setOpen(!open);
+    }
+    
+
     return (
         <>
-            <div className='flex items-center px-8 py-2 ' onMouseLeave={() => setOpen(true)}>
+            <div className='flex items-center px-8 py-2 ' onMouseLeave={() => setOpen(false)}>
                 <div className=' flex lg:flex-1 md:flex-none  flex-1'>
                     <Link href='/' className="flex flex-1">
                         <Image src={NikeLogo} width={56} height={56} alt="" className='' />
@@ -732,8 +738,8 @@ function Header2() {
                     {
                         NavData.map((items, index) => (
                             <a key={index}>
-                                <div className='w-full' onClick={() => { setOpen(!open); setIndex(index) }}>{items.category}</div>
-                                {!open && Index == index ?
+                                <div className='w-full' onClick={() => { handleOpen(); setIndex(index) }}>{items.category}</div>
+                                {open && Index == index ?
                                     (<div className='w-full left-0 flex justify-center absolute  mt-2 bg-slate-50 drop-shadow-md'>
                                         <div>
                                             <div className='md:px-20 flex flex-wrap gap-8 py-4'>
@@ -789,9 +795,9 @@ function Header2() {
                     </div>
                 </div>
             </div>
-            <div className='md:hidden flex absolute top-0 left-[60%]  w-full max-h-screen border'>
+            {/* <div className='md:hidden flex absolute top-0 left-[60%]  w-full max-h-screen border'>
                 jerjk
-            </div>
+            </div> */}
         </>
     )
 }

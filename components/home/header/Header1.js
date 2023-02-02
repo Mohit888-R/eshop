@@ -10,9 +10,9 @@ function Header1() {
                 <Image src={JordanLogo} width={28} height={28} alt="" className='p-1' />
             </a>
             <div className='space-x-2 text-[12px]'>
-                <Link href="/membership" className='hover:opacity-60'>Join Us</Link>
+                <Link href="/authentication/register" className='hover:opacity-60'>Join Us</Link>
                 <span className='border-l border-black text-[10px]'></span>
-                <Link href='/member/profile/login' className='hover:opacity-60'>Sign In</Link>
+                <Link href='/authentication/login' className='hover:opacity-60'>Sign In</Link>
             </div>
         </div>
     )
