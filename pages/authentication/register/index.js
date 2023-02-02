@@ -4,6 +4,7 @@ import NikeLogo from "../../../assets/nikeLogo.png";
 import Header1 from '../../../components/home/header/Header1';
 import Header2 from '../../../components/home/header/Header2';
 import Footer from '../../../components/home/Footer/footer';
+import Link from 'next/link';
 
 function index() {
   return (
@@ -33,7 +34,7 @@ function index() {
                 </div>
                 <button className='uppercase px-8 py-2 text-[16px] border bg-black rounded-md text-white '>Sign In</button>
                 <div className='text-[12px]'>
-                Not a Member? <a href='/authentication/register' className='underline font-bold'>Join Us</a>.
+                Not a Member? <Link href='/authentication/register' className='underline font-bold'>Join Us</Link>.
                 </div>
             </form>
             </div>
