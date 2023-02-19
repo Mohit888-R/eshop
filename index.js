@@ -4,7 +4,7 @@ const app = express();
 const mongodb = require("mongodb");
 const {connect}= require('./config/db');
 const authRouter = require('./routes/userRouter');
-const productRouter = require('./routes/productRouter');
+const productRouter = require('./routes/ProductRouter');
 
 require('dotenv').config();
 

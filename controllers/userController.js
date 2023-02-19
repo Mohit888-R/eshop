@@ -1,6 +1,4 @@
-const User = require("../models/userModels");
-
-
+const User = require("../models/userModel");
 
 const register = async(req,res)=>{
     const email = req.body.email;
