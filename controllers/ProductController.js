@@ -1,4 +1,4 @@
-const Product = require('../models/productModels');
+const Product = require('../models/productModel');
 
 const CreateProducts = async(req,res)=>{
     const {imageUrl,feature,name,category,price,size,color} = req.body;

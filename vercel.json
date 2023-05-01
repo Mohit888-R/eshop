@@ -1,0 +1,66 @@
+{
+    "version":2,
+    "env":{
+        "PORT":"5000",
+        "MONGO_URI":"mongodb+srv://narukamohit88:KMn5wQnj3sDxWo0T@cluster0.mon58sv.mongodb.net/?retryWrites=true&w=majority"
+    },
+    "builds": [
+        {
+            "src": "./index.js",
+            "use": "@vercel/node",
+            "config": {}
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        },
+        {
+            "src": "/api/v1/user/register",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/user/login",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/user/getuserdetail/:id",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/user/getallusersdetail",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/user/updateprofile/:id",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/user/deleteprofile/:id",
+            "dest": "/routers/controllers"
+        },
+
+        {
+            "src": "/api/v1/product/createProducts",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/product/getProduct/:id",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/product/getAllProducts",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/product/updateProduct/:id",
+            "dest": "/routers/controllers"
+        },
+        {
+            "src": "/api/v1/product/deleteProduct/:id",
+            "dest": "/routers/controllers"
+        }
+       
+    ]
+}
